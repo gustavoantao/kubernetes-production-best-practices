@@ -1,11 +1,13 @@
-# Kubernetes production best-practices
+# Boas práticas para Kubernetes em produção
 
-This checklist provides actionable best practices for deploying secure, scalable, and resilient services on Kubernetes.
+** Nota: ** Esta é uma tradução livre do conteúdo encontrado no repositório da [learnk8s.io](https://github.com/learnk8s/kubernetes-production-best-practices)
 
-![Kubernetes production best practices](preview.gif)
+Este checklist provê ações de boas práticas para a entrega de serviços seguros, escaláveis e resilientes no Kubernetes
 
-**Topics**
+![Boas práticas para Kubernetes em produção](preview.gif)
 
-- [Application development](application-development.md)
-- [Governance](governance.md)
-- [Cluster configuration](configuration.md)
+**Topicos**
+
+- [Desenvolvimento de Aplicações](application-development.md)
+- [Governança](governance.md)
+- [Configuração do Cluster](configuration.md)
