@@ -1,28 +1,28 @@
-# Cluster configuration
+# Configuração do Cluster
 
-Cluster configuration best practices.
+Boas práticas para configuração do cluster
 
-## Approved Kubernetes configuration
+## Configurações aprovadas do Kubernetes
 
-Kubernetes is flexible and can be configured in several different ways.
+O Kubernetes é flexível e pode ser configurado de várias formas diferentes.
 
-But how do you know what's the recommended configuration for your cluster?
+Mas como você sabe qual é a configuração recomendada para seu cluster?
 
-The best option is to compare your cluster with a standard reference.
+A melhor opção é comparar seu cluster com um padrão para referência.
 
-In the case of Kubernetes, the reference is the Centre for Internet Security (CIS) benchmark.
+No caso do Kubernetes, a referência é o benchmark do Centre for Internet Security (CIS).
 
-### The cluster passes the CIS benchmark
+### O cluster passa no benckmark do CIS
 
-The Center for Internet Security provides several guidelines and benchmark tests for best practices in securing your code.
+O Centro para segurança na Internet provê diversos guias e benchmarks para melhores práticas em tornar seu código seguro.
 
-They also maintain a benchmark for Kubernetes which you can [download from the official website](https://www.cisecurity.org/benchmark/kubernetes/).
+Eles também mantém um benchmark para Kubernetes que você pode [baixar do site oficial](https://www.cisecurity.org/benchmark/kubernetes/)
 
-While you can read the lengthy guide and manually check if your cluster is compliant, an easier way is to download and execute [`kube-bench`](https://github.com/aquasecurity/kube-bench).
+Embora você possa ler o longo guia e checar manualmente a conformidade do seu cluster, uma forma mais fácil é baixar e executar o [`kube-bench`](https://github.com/aquasecurity/kube-bench).
 
-[`kube-bench`](https://github.com/aquasecurity/kube-bench) is a tool designed to automate the CIS Kubernetes benchmark and report on misconfigurations in your cluster.
+O [`kube-bench`](https://github.com/aquasecurity/kube-bench) é uma ferramenta criada para automatizar o benchmark Kubernetes do CIS e reportar erros de configuração no seu cluster.
 
-Example output:
+Exemplo:
 
 ```terminal|title=bash
 [INFO] 1 Master Node Security Configuration
@@ -37,7 +37,7 @@ Example output:
 [FAIL] 1.1.8 Ensure that the --profiling argument is set to false (Scored)
 ```
 
-> Please note that it is not possible to inspect the master nodes of managed clusters such as GKE, EKS and AKS, using `kube-bench`. The master nodes are controlled and managed by the cloud provider.
+> Por favor note que não é possível inspecionar os master nodes de clusters gerenciados como GKE, EKS e AKS, utilizando o `kube-bench`. Os master nodes são controlados e gerenciados pelo cloud provider.
 
 ### Disable metadata cloud providers metada API
 
